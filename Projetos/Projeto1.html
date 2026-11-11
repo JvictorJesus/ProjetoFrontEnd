@@ -10,44 +10,131 @@
   <div class="site">
     <aside class="menu-lateral">
       <div class="marca">
-        <a href="Index.html">EventHub</a>
+        <a href="../index.html">EventHub</a>
         <span>Eventos e iniciativas</span>
       </div>
       <nav>
-        <a href="../Index.html">Início</a>
-        <a href="../Projetos.html" class="ativo">Galeria</a>
-        <a href="../Sobre.html">Sobre</a>
-        <a href="../Contato.html">Contato</a>
-        <a href="../Perfil.html">Conta</a>
+        <a href="../index.html">Início</a>
+        <a href="../projetos.html" class="ativo">Galeria</a>
+        <a href="../sobre.html">Sobre</a>
+        <a href="../contato.html">Contato</a>
+        <a href="../perfil.html">Conta</a>
       </nav>
       <div class="menu-rodape">© 2026 EventHub</div>
     </aside>
     
     <div class="area-principal">
       <header class="topo">
-        <a href="Index.html" class="logo">Event<span>Hub</span></a>
-        <a href="Publicar.html" class="btn-destaque">Publicar</a>
+        <a href="index.html" class="logo">Event<span>Hub</span></a>
+
+        <!-- Barra de pesquisa no centro -->
+        <div class="topo-pesquisa">
+          <input type="text" placeholder="Pesquisar eventos ou projetos...">
+        </div>
+
+        <a href="publicar.html" class="btn-destaque">Publicar</a>
       </header>
       
       <main>
         <div class="detalhe-area">
           <div class="detalhe-box">
-            <h1>Hackathon Universitário 2026</h1>
+            
+            <!-- Título e meta -->
+            <div class="detalhe-topo">
+              <h1>Hackathon Universitário 2026</h1>
+              <div class="detalhe-meta">
+                <span>📅 15–17 de Março de 2026</span>
+                <span>📍 Campus Central - Universidade Federal</span>
+                <span>🏷️ Tecnologia · Inovação · Educação</span>
+              </div>
+            </div>
+
+            <!-- Imagem -->
             <div class="carrossel">
               <img src="../Imagens/Projeto1.png" alt="Hackathon Universitário 2026">
             </div>
-            <h3>Descrição</h3>
-            <p>48 horas de inovação, networking e desenvolvimento de soluções para problemas reais da comunidade. O evento conta com mentoria de profissionais, workshops técnicos e premiação para os melhores projetos. Desafios em saúde digital, mobilidade urbana e inclusão digital.</p>
+
+            <!-- Ações principais -->
             <div class="detalhe-acoes">
-              <a href="../Contato.html" class="btn">Seguir</a>
-              <a href="../Projetos.html" class="btn btn-secundario">Compartilhar</a>
-              <span class="detalhe-stats">40 Visualizações  31 Seguindo</span>
+              <a href="#" class="btn">Participar</a>
+              <a href="#" class="btn btn-secundario">Curtir</a>
+              <a href="#" class="btn btn-secundario">Compartilhar</a>
+              <span class="detalhe-stats">👁 40 participantes · ❤️ 31 curtidas</span>
             </div>
+
+            <!-- Descrição -->
+            <section class="detalhe-secao">
+              <h3>Sobre o evento</h3>
+              <p>48 horas de inovação, networking e desenvolvimento de soluções para problemas reais da comunidade. O evento conta com mentoria de profissionais, workshops técnicos e premiação para os melhores projetos.</p>
+              <p>Desafios em saúde digital, mobilidade urbana e inclusão digital. Aberto para estudantes de todas as áreas e níveis de conhecimento.</p>
+            </section>
+
+            <!-- Informações extras -->
+            <section class="detalhe-secao">
+              <h3>Informações</h3>
+              <ul class="detalhe-lista">
+                <li><strong>Organização:</strong> Centro Acadêmico de Computação</li>
+                <li><strong>Vagas:</strong> 120 participantes</li>
+                <li><strong>Formato:</strong> Presencial</li>
+                <li><strong>Inscrições até:</strong> 10 de Março de 2026</li>
+              </ul>
+            </section>
+
+            <!-- Comentários -->
+            <section class="detalhe-secao comentarios">
+              <h3>Comentários <span class="comentario-count">(3)</span></h3>
+
+              <!-- Formulário de comentário (visual) -->
+              <div class="comentario-form">
+                <textarea placeholder="Escreva um comentário..." rows="3"></textarea>
+                <button type="button" class="btn">Comentar</button>
+              </div>
+
+              <!-- Lista de comentários (estáticos) -->
+              <div class="comentario-lista">
+                
+                <div class="comentario">
+                  <div class="comentario-avatar">A</div>
+                  <div class="comentario-conteudo">
+                    <div class="comentario-topo">
+                      <strong>Ana Souza</strong>
+                      <span>há 2 dias</span>
+                    </div>
+                    <p>Participarei pela segunda vez! Ano passado foi incrível, recomendo demais.</p>
+                  </div>
+                </div>
+
+                <div class="comentario">
+                  <div class="comentario-avatar">R</div>
+                  <div class="comentario-conteudo">
+                    <div class="comentario-topo">
+                      <strong>Rafael Lima</strong>
+                      <span>há 5 dias</span>
+                    </div>
+                    <p>Alguém sabe se precisa ter equipe formada ou pode ir sozinho?</p>
+                  </div>
+                </div>
+
+                <div class="comentario">
+                  <div class="comentario-avatar">M</div>
+                  <div class="comentario-conteudo">
+                    <div class="comentario-topo">
+                      <strong>Marina Costa</strong>
+                      <span>há 1 semana</span>
+                    </div>
+                    <p>Os desafios desse ano estão bem interessantes. Já estou montando o time!</p>
+                  </div>
+                </div>
+
+              </div>
+            </section>
+
           </div>
         </div>
       </main>
+
       <footer class="rodape">
-        <a href="../Contato.html">Fale Conosco</a>
+        <a href="../contato.html">Fale Conosco</a>
         <span>2026</span>
         <span>Redes Sociais</span>
       </footer>
