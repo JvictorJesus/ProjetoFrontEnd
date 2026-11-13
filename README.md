@@ -73,7 +73,7 @@ ProjetoFrontEnd/
 ├── perfil.html
 ├── login.html
 ├── registro.html
-├── novo-projeto.html
+├── publicar.html
 ├── projetos/
 │   ├── projeto1.html
 │   ├── projeto2.html
@@ -113,7 +113,8 @@ ProjetoFrontEnd/
 ## 📸 Páginas Principais
 
 - [ ] Index  
-- [ ] Projetos / Galeria  
+- [ ] Projetos / Galeria
+- [ ] Publicação
 - [ ] Contato  
 - [ ] Login / Registro  
 - [ ] Perfil  
