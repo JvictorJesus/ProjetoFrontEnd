@@ -6,51 +6,51 @@
   <title>Publicar Evento - EventHub</title>
   <link rel="stylesheet" href="CSS/Style.css">
   <style>
-    /* Estilos específicos da página de publicação (caso o CSS principal ainda não tenha) */
+    /* Apenas o necessário para o formulário de publicação */
     .form-publicar {
-      max-width: 720px;
-      margin: 0 auto;
+      max-width: 100%;
     }
 
     .form-grupo {
-      margin-bottom: 1.5rem;
+      margin-bottom: 1.35rem;
     }
 
     .form-grupo label {
       display: block;
+      font-size: 13px;
       font-weight: 600;
-      margin-bottom: 0.4rem;
-      color: #1e3a5f;
-      font-size: 0.95rem;
+      color: #333;
+      margin-bottom: 6px;
     }
 
     .form-grupo input[type="text"],
     .form-grupo input[type="date"],
     .form-grupo input[type="number"],
-    .form-grupo input[type="url"],
     .form-grupo select,
     .form-grupo textarea {
       width: 100%;
-      padding: 0.7rem 0.9rem;
-      border: 1px solid #d0d5dd;
-      border-radius: 8px;
-      font-size: 0.95rem;
-      background: #fff;
-      transition: border-color 0.2s, box-shadow 0.2s;
-      box-sizing: border-box;
+      padding: 11px 13px;
+      border: 1px solid #d1d5db;
+      border-radius: 6px;
+      font-size: 14px;
+      background-color: #f9fafb;
+      color: #333;
+      font-family: inherit;
+      transition: border-color 0.15s, box-shadow 0.15s, background 0.15s;
     }
 
     .form-grupo input:focus,
     .form-grupo select:focus,
     .form-grupo textarea:focus {
       outline: none;
-      border-color: #1e3a5f;
-      box-shadow: 0 0 0 3px rgba(30, 58, 95, 0.12);
+      border-color: #2563eb;
+      background-color: #fff;
+      box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
     }
 
     .form-grupo textarea {
-      resize: vertical;
       min-height: 120px;
+      resize: vertical;
     }
 
     .form-linha {
@@ -66,81 +66,101 @@
     }
 
     .form-upload {
-      border: 2px dashed #c5cdd8;
-      border-radius: 10px;
-      padding: 2rem 1.5rem;
+      border: 2px dashed #d1d5db;
+      border-radius: 8px;
+      padding: 28px 20px;
       text-align: center;
-      background: #f8f9fb;
+      background: #f9fafb;
       cursor: pointer;
-      transition: border-color 0.2s, background 0.2s;
+      transition: border-color 0.15s, background 0.15s;
     }
 
     .form-upload:hover {
-      border-color: #1e3a5f;
-      background: #f0f4f9;
-    }
-
-    .form-upload p {
-      margin: 0.4rem 0 0;
-      color: #667085;
-      font-size: 0.9rem;
+      border-color: #2563eb;
+      background: #f0f5ff;
     }
 
     .form-upload strong {
+      display: block;
       color: #1e3a5f;
+      font-size: 14px;
+      margin-bottom: 4px;
+    }
+
+    .form-upload p {
+      margin: 0;
+      font-size: 13px;
+      color: #6b7280;
     }
 
     .form-acoes {
       display: flex;
-      gap: 0.8rem;
-      margin-top: 2rem;
+      gap: 10px;
+      margin-top: 8px;
       flex-wrap: wrap;
     }
 
     .form-acoes .btn {
-      min-width: 140px;
-      text-align: center;
+      background-color: #2563eb;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 6px;
+      font-size: 14px;
+      font-weight: 500;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      transition: background 0.15s;
+    }
+
+    .form-acoes .btn:hover {
+      background-color: #1e40af;
+    }
+
+    .form-acoes .btn-secundario {
+      background-color: #e5e7eb;
+      color: #333;
+    }
+
+    .form-acoes .btn-secundario:hover {
+      background-color: #d1d5db;
     }
 
     .dica {
-      font-size: 0.82rem;
-      color: #667085;
-      margin-top: 0.3rem;
-    }
-
-    .titulo-pagina {
-      margin-bottom: 0.3rem;
+      font-size: 12px;
+      color: #6b7280;
+      margin-top: 5px;
     }
 
     .subtitulo-pagina {
-      color: #667085;
-      margin-bottom: 2rem;
-      font-size: 0.95rem;
+      color: #555;
+      font-size: 14px;
+      margin-bottom: 28px;
+      margin-top: -4px;
     }
   </style>
 </head>
 <body>
   <div class="site">
-    <!-- Menu lateral -->
     <aside class="menu-lateral">
       <div class="marca">
-        <a href="../index.html">EventHub</a>
+        <a href="index.html">EventHub</a>
         <span>Eventos e iniciativas</span>
       </div>
       <nav>
-        <a href="../index.html">Início</a>
-        <a href="../projetos.html">Galeria</a>
-        <a href="../sobre.html">Sobre</a>
-        <a href="../contato.html">Contato</a>
-        <a href="../perfil.html">Conta</a>
+        <a href="index.html">Início</a>
+        <a href="projetos.html">Galeria</a>
+        <a href="sobre.html">Sobre</a>
+        <a href="contato.html">Contato</a>
+        <a href="perfil.html">Conta</a>
       </nav>
       <div class="menu-rodape">© 2026 EventHub</div>
     </aside>
 
     <div class="area-principal">
-      <!-- Topo -->
       <header class="topo">
-        <a href="../index.html" class="logo">Event<span>Hub</span></a>
+        <a href="index.html" class="logo">Event<span>Hub</span></a>
         <div class="topo-pesquisa">
           <input type="text" placeholder="Pesquisar eventos ou projetos...">
         </div>
@@ -151,10 +171,10 @@
         <div class="detalhe-area">
           <div class="detalhe-box">
 
-            <h1 class="titulo-pagina">Publicar novo evento</h1>
-            <p class="subtitulo-pagina">Preencha as informações abaixo para divulgar seu evento ou iniciativa na plataforma.</p>
+            <h1 style="font-size: 22px; margin-bottom: 6px; color: #1a1a1a;">Publicar novo evento</h1>
+            <p class="subtitulo-pagina">Preencha as informações abaixo para divulgar seu evento ou iniciativa.</p>
 
-            <form class="form-publicar" action="#" method="post" onsubmit="return simularPublicacao(event)">
+            <form class="form-publicar" onsubmit="return simularPublicacao(event)">
 
               <!-- Título -->
               <div class="form-grupo">
@@ -162,7 +182,7 @@
                 <input type="text" id="titulo" name="titulo" placeholder="Ex: Hackathon Universitário 2026" required>
               </div>
 
-              <!-- Data e Local -->
+              <!-- Datas -->
               <div class="form-linha">
                 <div class="form-grupo">
                   <label for="data-inicio">Data de início *</label>
@@ -174,36 +194,37 @@
                 </div>
               </div>
 
+              <!-- Local -->
               <div class="form-grupo">
                 <label for="local">Local *</label>
                 <input type="text" id="local" name="local" placeholder="Ex: Campus Central - Universidade Federal" required>
               </div>
 
-              <!-- Categorias / Tags -->
+              <!-- Categorias -->
               <div class="form-grupo">
                 <label for="categorias">Categorias / Tags</label>
                 <input type="text" id="categorias" name="categorias" placeholder="Ex: Tecnologia · Inovação · Educação">
-                <p class="dica">Separe as tags com o símbolo · ou vírgula</p>
+                <p class="dica">Separe as tags com · ou vírgula</p>
               </div>
 
-              <!-- Imagem de capa -->
+              <!-- Upload de imagem -->
               <div class="form-grupo">
                 <label>Imagem de capa</label>
                 <div class="form-upload" onclick="document.getElementById('imagem').click()">
                   <strong>Clique para enviar uma imagem</strong>
                   <p>PNG ou JPG · Recomendado 1200×600px</p>
                   <input type="file" id="imagem" name="imagem" accept="image/*" style="display: none;" onchange="mostrarNomeArquivo(this)">
-                  <p id="nome-arquivo" style="margin-top: 0.6rem; color: #1e3a5f; font-weight: 500;"></p>
+                  <p id="nome-arquivo" style="margin-top: 10px; color: #2563eb; font-weight: 500; font-size: 13px;"></p>
                 </div>
               </div>
 
               <!-- Descrição -->
               <div class="form-grupo">
                 <label for="descricao">Descrição do evento *</label>
-                <textarea id="descricao" name="descricao" rows="5" placeholder="Conte sobre o evento, objetivos, o que os participantes podem esperar..." required></textarea>
+                <textarea id="descricao" name="descricao" rows="5" placeholder="Conte sobre o evento, objetivos e o que os participantes podem esperar..." required></textarea>
               </div>
 
-              <!-- Informações extras -->
+              <!-- Organização e Vagas -->
               <div class="form-linha">
                 <div class="form-grupo">
                   <label for="organizacao">Organização / Responsável</label>
@@ -215,6 +236,7 @@
                 </div>
               </div>
 
+              <!-- Formato e Inscrições -->
               <div class="form-linha">
                 <div class="form-grupo">
                   <label for="formato">Formato</label>
@@ -231,17 +253,17 @@
                 </div>
               </div>
 
-              <!-- Contato (opcional) -->
+              <!-- Contato -->
               <div class="form-grupo">
-                <label for="contato">Link ou e-mail de contato</label>
-                <input type="text" id="contato" name="contato" placeholder="Ex: evento@universidade.edu.br ou link de inscrição">
+                <label for="contato">E-mail ou link de contato</label>
+                <input type="text" id="contato" name="contato" placeholder="Ex: evento@universidade.edu.br">
               </div>
 
-              <!-- Botões de ação -->
+              <!-- Botões -->
               <div class="form-acoes">
                 <button type="submit" class="btn">Publicar evento</button>
                 <button type="button" class="btn btn-secundario" onclick="salvarRascunho()">Salvar rascunho</button>
-                <a href="../projetos.html" class="btn btn-secundario">Cancelar</a>
+                <a href="projetos.html" class="btn btn-secundario">Cancelar</a>
               </div>
 
             </form>
@@ -251,7 +273,7 @@
       </main>
 
       <footer class="rodape">
-        <a href="../contato.html">Fale Conosco</a>
+        <a href="contato.html">Fale Conosco</a>
         <span>2026</span>
         <span>Redes Sociais</span>
       </footer>
@@ -259,34 +281,25 @@
   </div>
 
   <script>
-    // Simula o envio do formulário
     function simularPublicacao(event) {
       event.preventDefault();
-
       const titulo = document.getElementById('titulo').value.trim();
       if (!titulo) {
-        alert('Por favor, preencha o título do evento.');
+        alert('Preencha o título do evento.');
         return false;
       }
-
-      // Feedback visual de sucesso
-      alert('✅ Evento "' + titulo + '" publicado com sucesso!\n\n(Simulação — em um sistema real, os dados seriam enviados ao servidor)');
-      
-      // Opcional: redirecionar para a galeria após "publicar"
-      // window.location.href = '../projetos.html';
+      alert('✅ Evento "' + titulo + '" publicado com sucesso!\n\n(Simulação)');
       return false;
     }
 
-    // Mostra o nome do arquivo selecionado
     function mostrarNomeArquivo(input) {
       const nome = input.files[0] ? input.files[0].name : '';
       document.getElementById('nome-arquivo').textContent = nome ? '📷 ' + nome : '';
     }
 
-    // Simula salvar rascunho
     function salvarRascunho() {
       const titulo = document.getElementById('titulo').value.trim() || 'Sem título';
-      alert('📝 Rascunho de "' + titulo + '" salvo com sucesso!\n\n(Simulação)');
+      alert('📝 Rascunho de "' + titulo + '" salvo!\n\n(Simulação)');
     }
   </script>
 </body>
