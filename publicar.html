@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Publicar Evento - EventHub</title>
+  <link rel="stylesheet" href="../CSS/Style.css">
+  <style>
+    /* Estilos específicos da página de publicação (caso o CSS principal ainda não tenha) */
+    .form-publicar {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    .form-grupo {
+      margin-bottom: 1.5rem;
+    }
+
+    .form-grupo label {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 0.4rem;
+      color: #1e3a5f;
+      font-size: 0.95rem;
+    }
+
+    .form-grupo input[type="text"],
+    .form-grupo input[type="date"],
+    .form-grupo input[type="number"],
+    .form-grupo input[type="url"],
+    .form-grupo select,
+    .form-grupo textarea {
+      width: 100%;
+      padding: 0.7rem 0.9rem;
+      border: 1px solid #d0d5dd;
+      border-radius: 8px;
+      font-size: 0.95rem;
+      background: #fff;
+      transition: border-color 0.2s, box-shadow 0.2s;
+      box-sizing: border-box;
+    }
+
+    .form-grupo input:focus,
+    .form-grupo select:focus,
+    .form-grupo textarea:focus {
+      outline: none;
+      border-color: #1e3a5f;
+      box-shadow: 0 0 0 3px rgba(30, 58, 95, 0.12);
+    }
+
+    .form-grupo textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    .form-linha {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+
+    @media (max-width: 600px) {
+      .form-linha {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .form-upload {
+      border: 2px dashed #c5cdd8;
+      border-radius: 10px;
+      padding: 2rem 1.5rem;
+      text-align: center;
+      background: #f8f9fb;
+      cursor: pointer;
+      transition: border-color 0.2s, background 0.2s;
+    }
+
+    .form-upload:hover {
+      border-color: #1e3a5f;
+      background: #f0f4f9;
+    }
+
+    .form-upload p {
+      margin: 0.4rem 0 0;
+      color: #667085;
+      font-size: 0.9rem;
+    }
+
+    .form-upload strong {
+      color: #1e3a5f;
+    }
+
+    .form-acoes {
+      display: flex;
+      gap: 0.8rem;
+      margin-top: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .form-acoes .btn {
+      min-width: 140px;
+      text-align: center;
+    }
+
+    .dica {
+      font-size: 0.82rem;
+      color: #667085;
+      margin-top: 0.3rem;
+    }
+
+    .titulo-pagina {
+      margin-bottom: 0.3rem;
+    }
+
+    .subtitulo-pagina {
+      color: #667085;
+      margin-bottom: 2rem;
+      font-size: 0.95rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="site">
+    <!-- Menu lateral -->
+    <aside class="menu-lateral">
+      <div class="marca">
+        <a href="../index.html">EventHub</a>
+        <span>Eventos e iniciativas</span>
+      </div>
+      <nav>
+        <a href="../index.html">Início</a>
+        <a href="../projetos.html">Galeria</a>
+        <a href="../sobre.html">Sobre</a>
+        <a href="../contato.html">Contato</a>
+        <a href="../perfil.html">Conta</a>
+      </nav>
+      <div class="menu-rodape">© 2026 EventHub</div>
+    </aside>
+
+    <div class="area-principal">
+      <!-- Topo -->
+      <header class="topo">
+        <a href="../index.html" class="logo">Event<span>Hub</span></a>
+        <div class="topo-pesquisa">
+          <input type="text" placeholder="Pesquisar eventos ou projetos...">
+        </div>
+        <a href="publicar.html" class="btn-destaque">Publicar</a>
+      </header>
+
+      <main>
+        <div class="detalhe-area">
+          <div class="detalhe-box">
+
+            <h1 class="titulo-pagina">Publicar novo evento</h1>
+            <p class="subtitulo-pagina">Preencha as informações abaixo para divulgar seu evento ou iniciativa na plataforma.</p>
+
+            <form class="form-publicar" action="#" method="post" onsubmit="return simularPublicacao(event)">
+
+              <!-- Título -->
+              <div class="form-grupo">
+                <label for="titulo">Título do evento *</label>
+                <input type="text" id="titulo" name="titulo" placeholder="Ex: Hackathon Universitário 2026" required>
+              </div>
+
+              <!-- Data e Local -->
+              <div class="form-linha">
+                <div class="form-grupo">
+                  <label for="data-inicio">Data de início *</label>
+                  <input type="date" id="data-inicio" name="data-inicio" required>
+                </div>
+                <div class="form-grupo">
+                  <label for="data-fim">Data de término</label>
+                  <input type="date" id="data-fim" name="data-fim">
+                </div>
+              </div>
+
+              <div class="form-grupo">
+                <label for="local">Local *</label>
+                <input type="text" id="local" name="local" placeholder="Ex: Campus Central - Universidade Federal" required>
+              </div>
+
+              <!-- Categorias / Tags -->
+              <div class="form-grupo">
+                <label for="categorias">Categorias / Tags</label>
+                <input type="text" id="categorias" name="categorias" placeholder="Ex: Tecnologia · Inovação · Educação">
+                <p class="dica">Separe as tags com o símbolo · ou vírgula</p>
+              </div>
+
+              <!-- Imagem de capa -->
+              <div class="form-grupo">
+                <label>Imagem de capa</label>
+                <div class="form-upload" onclick="document.getElementById('imagem').click()">
+                  <strong>Clique para enviar uma imagem</strong>
+                  <p>PNG ou JPG · Recomendado 1200×600px</p>
+                  <input type="file" id="imagem" name="imagem" accept="image/*" style="display: none;" onchange="mostrarNomeArquivo(this)">
+                  <p id="nome-arquivo" style="margin-top: 0.6rem; color: #1e3a5f; font-weight: 500;"></p>
+                </div>
+              </div>
+
+              <!-- Descrição -->
+              <div class="form-grupo">
+                <label for="descricao">Descrição do evento *</label>
+                <textarea id="descricao" name="descricao" rows="5" placeholder="Conte sobre o evento, objetivos, o que os participantes podem esperar..." required></textarea>
+              </div>
+
+              <!-- Informações extras -->
+              <div class="form-linha">
+                <div class="form-grupo">
+                  <label for="organizacao">Organização / Responsável</label>
+                  <input type="text" id="organizacao" name="organizacao" placeholder="Ex: Centro Acadêmico de Computação">
+                </div>
+                <div class="form-grupo">
+                  <label for="vagas">Número de vagas</label>
+                  <input type="number" id="vagas" name="vagas" min="1" placeholder="Ex: 120">
+                </div>
+              </div>
+
+              <div class="form-linha">
+                <div class="form-grupo">
+                  <label for="formato">Formato</label>
+                  <select id="formato" name="formato">
+                    <option value="">Selecione</option>
+                    <option value="Presencial">Presencial</option>
+                    <option value="Online">Online</option>
+                    <option value="Híbrido">Híbrido</option>
+                  </select>
+                </div>
+                <div class="form-grupo">
+                  <label for="inscricoes">Inscrições até</label>
+                  <input type="date" id="inscricoes" name="inscricoes">
+                </div>
+              </div>
+
+              <!-- Contato (opcional) -->
+              <div class="form-grupo">
+                <label for="contato">Link ou e-mail de contato</label>
+                <input type="text" id="contato" name="contato" placeholder="Ex: evento@universidade.edu.br ou link de inscrição">
+              </div>
+
+              <!-- Botões de ação -->
+              <div class="form-acoes">
+                <button type="submit" class="btn">Publicar evento</button>
+                <button type="button" class="btn btn-secundario" onclick="salvarRascunho()">Salvar rascunho</button>
+                <a href="../projetos.html" class="btn btn-secundario">Cancelar</a>
+              </div>
+
+            </form>
+
+          </div>
+        </div>
+      </main>
+
+      <footer class="rodape">
+        <a href="../contato.html">Fale Conosco</a>
+        <span>2026</span>
+        <span>Redes Sociais</span>
+      </footer>
+    </div>
+  </div>
+
+  <script>
+    // Simula o envio do formulário
+    function simularPublicacao(event) {
+      event.preventDefault();
+
+      const titulo = document.getElementById('titulo').value.trim();
+      if (!titulo) {
+        alert('Por favor, preencha o título do evento.');
+        return false;
+      }
+
+      // Feedback visual de sucesso
+      alert('✅ Evento "' + titulo + '" publicado com sucesso!\n\n(Simulação — em um sistema real, os dados seriam enviados ao servidor)');
+      
+      // Opcional: redirecionar para a galeria após "publicar"
+      // window.location.href = '../projetos.html';
+      return false;
+    }
+
+    // Mostra o nome do arquivo selecionado
+    function mostrarNomeArquivo(input) {
+      const nome = input.files[0] ? input.files[0].name : '';
+      document.getElementById('nome-arquivo').textContent = nome ? '📷 ' + nome : '';
+    }
+
+    // Simula salvar rascunho
+    function salvarRascunho() {
+      const titulo = document.getElementById('titulo').value.trim() || 'Sem título';
+      alert('📝 Rascunho de "' + titulo + '" salvo com sucesso!\n\n(Simulação)');
+    }
+  </script>
+</body>
+</html>
