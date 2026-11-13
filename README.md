@@ -1,4 +1,4 @@
-# 🎯 Projeto Front-End — Plataforma de Divulgação de Eventos & Iniciativas
+# 🎯 Event-Hub — Plataforma de Divulgação de Eventos & Iniciativas
 
 Plataforma web voltada para a **divulgação de eventos** e **compartilhamento de iniciativas**.  
 O visitante pode visualizar informações detalhadas, entrar em contato com os realizadores, fornecer feedback e (após login) publicar seus próprios eventos.
@@ -60,8 +60,6 @@ O visitante pode visualizar informações detalhadas, entrar em contato com os r
 | **Cor dos botões** | `#1e3a5f` |
 | **Fonte principal** | Branca (`#ffffff`) sobre fundos escuros |
 
-> **Dica:** Mantenha consistência visual em todas as páginas usando as variáveis CSS definidas em `css/style.css`.
-
 ---
 
 ## 📁 Estrutura de Arquivos
@@ -95,21 +93,10 @@ ProjetoFrontEnd/
 
 ## 🚀 Como executar o projeto
 
-1. Clone o repositório:
-   ```bash
-   git clone https://github.com/SEU-USUARIO/SEU-REPOSITORIO.git
-   ```
+1. Faça o download do projeto.
 2. Abra a pasta do projeto.
 3. Abra o arquivo `index.html` diretamente no navegador  
-   **ou** utilize um servidor local (recomendado):
-
-   ```bash
-   # Com Python
-   python -m http.server 8000
-
-   # Com Live Server (VS Code)
-   # Clique com o botão direito em index.html → "Open with Live Server"
-   ```
+   **ou** utilize um servidor local (recomendado).
 
 ---
 
@@ -123,7 +110,7 @@ ProjetoFrontEnd/
 
 ---
 
-## 📸 Páginas Principais (Wireframes de baixa fidelidade)
+## 📸 Páginas Principais
 
 - [ ] Index  
 - [ ] Projetos / Galeria  
@@ -131,8 +118,6 @@ ProjetoFrontEnd/
 - [ ] Login / Registro  
 - [ ] Perfil  
 - [ ] Página de detalhe do evento  
-
-*(Adicione aqui prints reais das páginas quando estiverem prontas)*
 
 ---
 
@@ -152,12 +137,7 @@ Comparação realizada em **31/10/2026** (valores promocionais):
 
 ## 👨‍💻 Autores / Grupo
 
-- Nome 1  
-- Nome 2  
-- Nome 3  
-- Nome 4  
-
-*(Atualize com os nomes reais do grupo)*
+- João Victor de Jesus Silva 
 
 ---
 
