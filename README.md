@@ -138,7 +138,7 @@ Comparação realizada em **31/10/2026** (valores promocionais):
 
 ## 👨‍💻 Autores / Grupo
 
-- João Victor de Jesus Silva 
+- João Victor de Jesus Silva | RGM: 48134872
 
 ---
 
